@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "appInsights2": {
+      "restored": true,
+      "restoreTime": "2023-07-24T20:17:33.062754Z"
+    },
     "storage1": {
       "restored": true,
       "restoreTime": "2023-07-21T21:10:33.9240699Z"

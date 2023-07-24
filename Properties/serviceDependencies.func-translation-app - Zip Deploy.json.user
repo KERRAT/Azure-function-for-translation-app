@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "appInsights2": {
+      "restored": true,
+      "restoreTime": "2023-07-24T20:06:08.3518603Z"
+    },
+    "storage1": {
+      "restored": true,
+      "restoreTime": "2023-07-24T20:01:22.2815417Z"
+    },
+    "appInsights1": {
+      "restored": true,
+      "restoreTime": "2023-07-24T20:17:28.5028978Z"
+    }
+  },
+  "parameters": {
+    "appInsights2.resourceGroupName": {
+      "Name": "appInsights2.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "func-translation-app"
+    },
+    "appInsights2.subscriptionId": {
+      "Name": "appInsights2.subscriptionId",
+      "Type": "subscription",
+      "Value": "3bffef23-ffd1-495a-96a7-9ae8e3889da7"
+    },
+    "storage1.resourceGroupName": {
+      "Name": "storage1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "func-translation-app"
+    },
+    "storage1.subscriptionId": {
+      "Name": "storage1.subscriptionId",
+      "Type": "subscription",
+      "Value": "3bffef23-ffd1-495a-96a7-9ae8e3889da7"
+    }
+  }
+}
