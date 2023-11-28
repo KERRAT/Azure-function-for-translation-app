@@ -32,6 +32,9 @@ namespace dbAdministration
             DateTimeOffset? sinceDate = ParseDate(req.Query["sinceDate"]);
             DateTimeOffset? untilDate = ParseDate(req.Query["untilDate"]);
 
+            int pageNumber = int.TryParse(req.Query["pageNumber"], out int pn) ? pn : 1; // За замовчуванням 1
+            int pageSize = int.TryParse(req.Query["pageSize"], out int ps) ? ps : 20; // За замовчуванням 20
+
             var translationsQuery = _context.Translations.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(status))
@@ -64,7 +67,12 @@ namespace dbAdministration
                 translationsQuery = translationsQuery.Where(t => t.ChangedDate <= untilDate.Value.UtcDateTime);
             }
 
+            translationsQuery = translationsQuery
+                            .Skip((pageNumber - 1) * pageSize)
+                            .Take(pageSize);
+
             var translations = await translationsQuery.ToListAsync();
+
 
             if (translations == null || translations.Count == 0)
             {
